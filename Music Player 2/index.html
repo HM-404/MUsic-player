@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="music-player">
+      <h1>
+        <strong><em>Music Player</em></strong>
+      </h1>
+      <div class="song-info">
+        <p id="title">Title:Song 1</p>
+        <p id="artist">Artist:A1</p>
+        <p id="album">Album:Melody</p>
+      </div>
+      <div class="album-art">
+        <img
+          src="images/pic p1.jpg"
+          alt="Current album cover"
+          width="300px"
+          height="300px"
+          class="album-img"
+        />
+      </div>
+      <audio id="audio" src="audio/song1.mp3" controls></audio>
+      <div class="controls">
+        <button id="play">Play <i>▶</i></button>
+        <button id="pause">Pause <i>⏸</i></button>
+        <input
+          type="range"
+          id="volume"
+          min="0"
+          max="1"
+          step="0.01"
+          value="0.5"
+        />
+        <input type="range" id="progress" value="0" />
+      </div>
+      <div class="playlist">
+        <h2><i>Playlist</i></h2>
+        <ul id="playlist"></ul>
+        <audio id="audio" src="audio/song2.mp3" controls></audio>
+        <audio id="audio" src="audio/song3.mp3" controls></audio>
+        <input type="text" id="song-input" placeholder="Add song URL" />
+        <button id="add-song">Add Song</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
